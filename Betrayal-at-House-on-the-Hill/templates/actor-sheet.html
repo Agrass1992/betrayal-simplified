@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Betrayal Actor Sheet</title>
+  </head>
+  <body>
+    <section class="actor-sheet">
+      <header>
+        <h1>{{name}}</h1>
+      </header>
+      
+      <section class="stats">
+        <h2>Stats</h2>
+        <div class="stat">
+          <label for="stat-might">Might</label>
+          <input type="number" name="data.stats.might.value" value="{{data.stats.might.value}}" />
+        </div>
+        <div class="stat">
+          <label for="stat-speed">Speed</label>
+          <input type="number" name="data.stats.speed.value" value="{{data.stats.speed.value}}" />
+        </div>
+        <div class="stat">
+          <label for="stat-sanity">Sanity</label>
+          <input type="number" name="data.stats.sanity.value" value="{{data.stats.sanity.value}}" />
+        </div>
+        <div class="stat">
+          <label for="stat-knowledge">Knowledge</label>
+          <input type="number" name="data.stats.knowledge.value" value="{{data.stats.knowledge.value}}" />
+        </div>
+      </section>
+
+      <section class="inventory">
+        <h2>Inventory</h2>
+        <ul>
+          {{#each items}}
+          <li>{{name}}</li>
+          {{/each}}
+        </ul>
+      </section>
+    </section>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .actor-sheet {
+        max-width: 600px;
+        margin: 20px auto;
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      header {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      h1 {
+        margin: 0;
+      }
+      .stats, .inventory {
+        margin: 10px 0;
+      }
+      .stat {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      label {
+        font-weight: bold;
+      }
+      input {
+        width: 50px;
+        padding: 5px;
+        text-align: center;
+      }
+      ul {
+        padding: 0;
+        list-style-type: none;
+      }
+      li {
+        padding: 5px 10px;
+        background: #e4e4e4;
+        margin-bottom: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </body>
+</html>
